@@ -1,0 +1,9 @@
+<!--books.wxml-->
+<view class="top-button">
+  <button bindtap="newbook">新建分类</button>
+</view>
+<scroll-view scroll-y="true">
+  <view wx:for="{{books}}" wx:for-index="idx" wx:for-item="i" class="item-container" bindtap="showDetail" bindlongtap="modifybook" id="{{idx}}">
+   <view class='booksview'>{{i.bookcaption}}</view>
+  </view>
+</scroll-view>
