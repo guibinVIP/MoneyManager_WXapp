@@ -43,7 +43,15 @@ Page({
 
  save : function(e){
    if (this.data.bookcaption ==''){
-
+       wx.showModal({
+         content: '名称不可为空',
+         showCancel: false,
+         success: function (res) {
+           if (res.confirm) {
+             console.log('用户点击确定')
+           }
+         }
+       })
    }
    else{
      this.data.books.push(this.makelist(Date.now(), this.data.bookcaption));

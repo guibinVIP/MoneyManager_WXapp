@@ -1,0 +1,8 @@
+<!--detailinfo.wxml-->
+<view class="section">
+  <text>名称</text>
+  <input id="input" class="inputbox" bindinput="bindKeyInput" placeholder="请输入" auto-focus type="text" value="{{bookcaption}}"/>
+  <button bindtap="save" hidden="{{modify}}">保存</button>
+  <button bindtap="update" hidden="{{!modify}}">修改</button>
+  <button bindtap="deletebook" hidden="{{!modify}}">删除</button>
+</view>
